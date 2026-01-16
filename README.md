@@ -1,98 +1,101 @@
-# 🏙️ Bangkok Housing Price Predictor (AI)
+# 🏙️ Bangkok Housing Price Predictor (BaanAI)
 
-โปรเจกต์ Machine Learning สำหรับทำนายราคาที่พักอาศัย (คอนโด, บ้าน, อพาร์ทเม้นท์) ในเขตกรุงเทพมหานคร โดยวิเคราะห์จากทำเล พื้นที่ใช้สอย และจำนวนห้อง
-A Machine Learning project to estimate housing prices in Bangkok based on location, area, and property type.
+> **Machine Learning Web Application for Real Estate Valuation in Bangkok** > เว็บแอปพลิเคชัน AI สำหรับประเมินราคาที่พักอาศัยในกรุงเทพฯ (คอนโด, บ้าน, อพาร์ทเม้นท์)
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Library](https://img.shields.io/badge/Library-Scikit--Learn-orange)
-![Framework](https://img.shields.io/badge/Framework-Streamlit-red)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn)
 
-## 🎯 Features (ความสามารถของระบบ)
-- **Price Prediction:** ทำนายราคาขายโดยใช้โมเดล Random Forest Regression
-- **Interactive Web App:** ใช้งานง่ายผ่านหน้าเว็บ (พัฒนาด้วย Streamlit)
-- **Data Visualization:** กราฟวิเคราะห์ความสัมพันธ์ของราคาและทำเลต่างๆ
+## 📖 Overview (ภาพรวมโปรเจกต์)
+โปรเจกต์นี้พัฒนาขึ้นเพื่อศึกษาและประยุกต์ใช้ **Machine Learning (Supervised Learning)** ในการทำนายราคาอสังหาริมทรัพย์ โดยโมเดลเรียนรู้จากข้อมูลจริงในกรุงเทพมหานคร ผู้ใช้งานสามารถระบุทำเล (Location), ขนาดพื้นที่ (Area), และจำนวนห้อง เพื่อให้ AI ประเมินราคาขายที่เหมาะสมได้ทันที
+
+This project utilizes a **Random Forest Regression** model to predict housing prices in Bangkok based on key features like location, property type, and size.
+
+## ✨ Features (ฟีเจอร์หลัก)
+* **Price Prediction AI:** ระบบทำนายราคาที่มีความแม่นยำสูง (R² Score > 99%)
+* **Interactive Dashboard:** ใช้งานง่ายผ่านหน้าเว็บด้วย **Streamlit**
+* **Data Visualization:** กราฟวิเคราะห์แนวโน้มราคาตลาดในแต่ละทำเล
+* **Real-time Processing:** ประมวลผลและแปลงข้อมูล (One-Hot Encoding) ผ่าน Pipeline อัตโนมัติ
 
 ## 🛠️ Tech Stack (เครื่องมือที่ใช้)
-- **Language:** Python
-- **Data Processing:** Pandas, NumPy
-- **Machine Learning:** Scikit-learn (Random Forest, Pipeline, One-Hot Encoding)
-- **Visualization:** Matplotlib, Seaborn
-- **Deployment:** Streamlit
+* **Language:** Python
+* **Core Library:** Pandas, NumPy (Data Manipulation)
+* **Machine Learning:** Scikit-learn (Random Forest, Pipeline)
+* **Visualization:** Matplotlib, Seaborn
+* **Web Framework:** Streamlit
 
-## 📊 Model Performance (ผลลัพธ์โมเดล)
-จากการเทรนโมเดลด้วยข้อมูลราคาที่พักอาศัยในกรุงเทพฯ ผลลัพธ์ที่ได้คือ:
-- **R² Score:** 99.41% (Very High Accuracy)
-- **MAE (Mean Absolute Error):** ~53,145 THB
-- **RMSE:** ~205,826 THB
+## 📊 Model Performance (ผลการทดสอบ)
+จากการเทรนโมเดลด้วยข้อมูลที่พักอาศัยในกรุงเทพฯ ผลลัพธ์ที่ได้คือ:
+| Metric | Value | Description |
+| :--- | :--- | :--- |
+| **R² Score** | **99.41%** | ความแม่นยำของโมเดล (สูงมาก) |
+| **MAE** | ~53,145 THB | ความคลาดเคลื่อนเฉลี่ย (Mean Absolute Error) |
+| **RMSE** | ~205,826 THB | ความคลาดเคลื่อนเมื่อเจอบ้านราคาสูงผิดปกติ |
 
-## 🚀 How to Run (วิธีใช้งาน)
+## 🚀 Installation & Usage (วิธีติดตั้งและใช้งาน)
 
-1. **Clone this repository**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/Bangkok-Housing-Price-Predictor.git](https://github.com/YOUR_USERNAME/Bangkok-Housing-Price-Predictor.git)
-   cd Bangkok-Housing-Price-Predictor
+### 1. Clone Repository
+```bash
+git clone [https://github.com/YOUR_USERNAME/Bangkok-Housing-Price-Predictor.git](https://github.com/YOUR_USERNAME/Bangkok-Housing-Price-Predictor.git)
+cd Bangkok-Housing-Price-Predictor
 
 ```
 
-2. **Install dependencies**
+### 2. Install Dependencies
+
+ติดตั้ง Library ที่จำเป็นทั้งหมด
+
 ```bash
 pip install -r requirements.txt
 
 ```
 
+### 3. Run the Application
 
-3. **Train the model (Optional)**
-หากต้องการเทรนโมเดลใหม่ด้วยข้อมูลล่าสุด
-```bash
-python train.py
+เปิดหน้าเว็บเพื่อเริ่มใช้งาน
 
-```
-
-
-4. **Run the Web App**
-เปิดหน้าเว็บสำหรับทำนายราคา
 ```bash
 streamlit run app.py
 
 ```
 
+### 4. (Optional) Retrain Model
 
-5. **View Analytics**
-ดู Data Visualization
+หากต้องการเทรนโมเดลใหม่ด้วยข้อมูลล่าสุด
+
+```bash
+python train.py
+
+```
+
+### 5. (Optional) View Analytics
+
+ดู Data Visualization กราฟวิเคราะห์ข้อมูล
+
 ```bash
 python visualize.py
 
 ```
 
-
-
 ## 📂 Project Structure
 
 ```text
-├── Bangkok Housing...csv   # Dataset (Raw Data)
-├── train.py                # Script for training the ML model
-├── app.py                  # Streamlit Web Application
-├── visualize.py            # Script for data visualization
+├── Bangkok Housing...csv   # Raw Dataset
+├── train.py                # Script for training ML model (Creates .pkl)
+├── app.py                  # Streamlit Web Application (Frontend)
+├── visualize.py            # Script for generating graphs/charts
 ├── house_model.pkl         # Trained Model (Saved Artifact)
-├── requirements.txt        # List of dependencies
+├── requirements.txt        # Python dependencies
 └── README.md               # Project Documentation
 
 ```
 
 ---
 
-Developed by [Your Name]
+**Developed by:** [Dechatorn Laikhain][www.linkedin.com/in/dechatorn-laikhain-0b89953a2]
+
+*Data Source: Kaggle (Bangkok Housing Condo Apartment Prices)*[https://www.kaggle.com/datasets/varintornsithisint/bangkok-housing-condo-apartment-prices]
 
 ```
 
----
 
-### ✅ Checklist สุดท้ายก่อนอัปโหลด
-
-1.  **อย่าอัปโหลดโฟลเดอร์ `.venv`:** มันใหญ่และรกครับ ให้สร้างไฟล์ชื่อ `.gitignore` แล้วพิมพ์คำว่า `.venv` ใส่ลงไป (รวมถึง `__pycache__` ด้วย)
-2.  **Dataset:** ไฟล์ CSV ของคุณขนาดเล็ก อัปโหลดขึ้นไปได้เลยครับ คนอื่นจะได้ลองเล่นได้
-3.  **Screenshot (ทางเลือก):** ถ้าขยัน ให้แคปหน้าจอตอนรันเว็บ `app.py` สวยๆ แล้วเอาไปแปะใน README จะเรียกแขกได้ดีมากครับ
-
-ยินดีด้วยครับ! คุณมีโปรเจกต์ Data Science ครบวงจร (End-to-End) ชิ้นแรกเป็นของตัวเองแล้ว 🎉
-
-```
