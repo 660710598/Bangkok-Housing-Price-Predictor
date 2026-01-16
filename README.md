@@ -92,10 +92,6 @@ python visualize.py
 
 ---
 
-**Developed by:** [Dechatorn Laikhain][www.linkedin.com/in/dechatorn-laikhain-0b89953a2]
+**Developed by:** [Dechatorn Laikhain](www.linkedin.com/in/dechatorn-laikhain-0b89953a2)
 
-*Data Source: Kaggle (Bangkok Housing Condo Apartment Prices)*[https://www.kaggle.com/datasets/varintornsithisint/bangkok-housing-condo-apartment-prices]
-
-```
-
-
+*Data Source:* [Kaggle (Bangkok Housing Condo Apartment Prices](https://www.kaggle.com/datasets/varintornsithisint/bangkok-housing-condo-apartment-prices)
